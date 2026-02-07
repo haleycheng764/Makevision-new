@@ -10,6 +10,7 @@ A production-ready Next.js 15 SaaS template for building AI-powered image genera
 - ✅ **AI Image Generation** - Multiple AI providers (Evolink, Google Gemini, etc.)
 - ✅ **Text-to-Image & Image-to-Image** - Full support for both generation modes
 - ✅ **Prompt Enhancement** - AI-powered prompt optimization
+- ✅ **Cloud Storage** - Automatic R2 storage for all AI-generated content
 - ✅ **Multi-language Support** - Built-in i18n with English and Chinese
 - ✅ **Authentication** - NextAuth with Google OAuth integration
 - ✅ **Responsive Design** - Mobile-first, works on all devices
@@ -21,6 +22,7 @@ A production-ready Next.js 15 SaaS template for building AI-powered image genera
 - **Styling**: Tailwind CSS 4 + Shadcn UI
 - **Authentication**: NextAuth.js
 - **Database**: Supabase (PostgreSQL)
+- **Storage**: Cloudflare R2 (S3-compatible)
 - **Internationalization**: next-intl
 - **AI Integration**: Vercel AI SDK
 - **Deployment**: Vercel, Cloudflare Pages, or Docker
@@ -60,10 +62,20 @@ AUTH_GOOGLE_SECRET="your-google-client-secret"
 SUPABASE_URL="your-supabase-url"
 SUPABASE_ANON_KEY="your-supabase-anon-key"
 
+# Required: Cloudflare R2 Storage (for AI-generated images/videos)
+STORAGE_ENDPOINT="https://your-account-id.r2.cloudflarestorage.com"
+STORAGE_REGION="auto"
+STORAGE_ACCESS_KEY="your-r2-access-key-id"
+STORAGE_SECRET_KEY="your-r2-secret-access-key"
+STORAGE_BUCKET="your-bucket-name"
+STORAGE_DOMAIN=""  # Optional: custom domain
+
 # Optional: AI Providers
 EVOLINK_API_KEY="your-evolink-api-key"
 EVOLINK_API_URL="https://api.evolink.ai"
 ```
+
+> 📖 **New to R2?** See our [R2 Quick Start Guide](./docs/R2_QUICKSTART.md) for detailed setup instructions.
 
 4. **Run the development server**
 ```bash
