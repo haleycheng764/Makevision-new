@@ -22,7 +22,7 @@ export default async function LandingPage({
   const t = await getTranslations("homepage");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-purple-50 dark:to-purple-950/20">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-16">
         <div className="text-center max-w-4xl mx-auto">
@@ -43,7 +43,7 @@ export default async function LandingPage({
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-lg rounded-full border-2"
+                className="btn-outline-primary px-8 py-6 text-lg rounded-full"
               >
                 {t("hero.tutorials")}
               </Button>
@@ -79,7 +79,7 @@ export default async function LandingPage({
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-sm">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-pastel-purple flex items-center justify-center text-primary font-bold text-sm">
                       01
                     </div>
                     <div>
@@ -88,7 +88,7 @@ export default async function LandingPage({
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-sm">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-pastel-purple flex items-center justify-center text-primary font-bold text-sm">
                       02
                     </div>
                     <div>
@@ -99,7 +99,7 @@ export default async function LandingPage({
                 </div>
                 <Button
                   size="default"
-                  className="rounded-full px-6"
+                  className="btn-gradient-primary rounded-full px-6"
                 >
                   {t("showcase.card1.start_creating")}
                 </Button>
@@ -120,7 +120,7 @@ export default async function LandingPage({
                 <Link href={`/${locale}/text-to-video`}>
                   <Button
                     size="lg"
-                    className="rounded-full px-8"
+                    className="btn-gradient-primary rounded-full px-8"
                   >
                     {t("showcase.card2.start_creating")}
                   </Button>
@@ -153,7 +153,7 @@ export default async function LandingPage({
                 <Link href={`/${locale}/text-to-image`}>
                   <Button
                     size="lg"
-                    className="rounded-full px-8"
+                    className="btn-gradient-primary rounded-full px-8"
                   >
                     {t("showcase.card3.start_creating")}
                   </Button>

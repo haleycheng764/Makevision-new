@@ -106,3 +106,28 @@
 .pricing-features svg {
   @apply text-primary;
 }
+
+/* MolyPix 风格渐变主按钮 */
+.btn-gradient-primary {
+  background: var(--gradient-primary) !important;
+  color: white !important;
+  border: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-gradient-primary:hover {
+  background: var(--gradient-primary-hover) !important;
+  color: white !important;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border: 2px solid oklch(0.55 0.28 310);
+  color: oklch(0.55 0.28 310);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: oklch(0.55 0.08 310);
+  color: oklch(0.55 0.28 310);
+}
